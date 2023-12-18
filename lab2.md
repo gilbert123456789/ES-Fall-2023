@@ -161,10 +161,51 @@ void loop()
 
 ```
 
+## 實作2-5: 按下按鍵, Green LED亮 & Red LED滅; 放開按鍵, Green LED滅 & Red LED亮.
 
+### 電路 ＆ Demo
 
+<img width="1440" alt="截圖 2023-12-18 上午11 40 27" src="https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/0116b1a9-6e5c-43d9-9908-237e19d576f8">
 
+https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/ba0cb72b-366d-46ac-89e4-5630591efe80
 
+### 程式
+
+```C
+int buttonState = 0;
+int GLED = 13;
+int RLED = 8;
+void setup()
+{
+  pinMode(2, INPUT);
+  
+  pinMode(GLED, OUTPUT);
+  pinMode(RLED, OUTPUT);
+  
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  // read the state of the pushbutton value
+  buttonState = digitalRead(2);
+  // check if pushbutton is pressed.  if it is, the
+  // buttonState is HIGH
+  if (buttonState == HIGH) {
+    // turn LED on
+    digitalWrite(GLED, HIGH);
+    digitalWrite(RLED, LOW);
+    
+  } else {
+    // turn LED off
+    digitalWrite(GLED, LOW);
+    digitalWrite(RLED, HIGH);
+  }
+  Serial.println(buttonState);
+  delay(10); // Delay a little bit to improve simulation performance
+}
+
+```
 
 
 
