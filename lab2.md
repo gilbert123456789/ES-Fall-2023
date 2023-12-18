@@ -92,6 +92,7 @@ https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/66c6b0ff-3ee3-
 
 ### 程式
 
+,,,c
 int R = 9;
 int G = 10;
 int B = 11;
