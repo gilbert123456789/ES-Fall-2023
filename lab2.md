@@ -41,6 +41,46 @@ void loop()
 
 https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/6588ea82-cb08-4ab4-bab5-343b9e6cdf21
 
+### 程式
+
+```C
+//
+/*
+  This program blinks pin 13 of the Arduino (the
+  built-in LED)
+*/
+
+const int Red = 9;
+const int Green = 10;
+const int Blue = 11;
+
+void setup()
+{
+  pinMode(Red, OUTPUT);
+  pinMode(Green, OUTPUT);
+  pinMode(Blue, OUTPUT);
+}
+
+void loop()
+{
+  // turn the LED on (HIGH is the voltage level)
+  analogWrite(Red, 255);
+  analogWrite(Green, 0);
+  analogWrite(Blue, 0);
+  delay(1000); // Wait for 1000 millisecond(s)
+  
+  analogWrite(Red, 0);
+  analogWrite(Green, 255);
+  analogWrite(Blue, 0);
+  delay(1000); // Wait for 1000 millisecond(s)
+  
+  analogWrite(Red, 0);
+  analogWrite(Green, 0);
+  analogWrite(Blue, 255);
+  delay(1000); // Wait for 1000 millisecond(s)  
+}
+
+```
 
 
 
