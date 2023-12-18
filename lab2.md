@@ -135,6 +135,43 @@ void loop()
 
 ### 電路 ＆ Demo
 
+<img width="1440" alt="截圖 2023-12-18 上午11 29 33" src="https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/caceb38e-bd9a-429c-a04a-fd013f355bf4">
+
+https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/88f06945-c181-46e8-bb67-555dba6dc12d
+
+### 程式
+
+```C
+int sensorValue = 0;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  // read the input on analog pin 0:
+  sensorValue = analogRead(A0);
+  // print out the value you read:
+  Serial.println(sensorValue);
+  delay(10); // Delay a little bit to improve simulation performance
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
