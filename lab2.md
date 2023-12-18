@@ -10,6 +10,8 @@
 https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/6e775db6-7321-4644-ad6a-7d7648d9253e
 
 ### 程式
+
+```C
 int brightness = 0;
 
 void setup()
@@ -28,4 +30,7 @@ void loop()
     delay(30); // Wait for 30 millisecond(s)
   }
 }
+
+```
+
 
