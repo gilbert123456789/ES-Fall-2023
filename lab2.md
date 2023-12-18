@@ -33,4 +33,14 @@ void loop()
 
 ```
 
+## 實作2-2, RGB LED燈全彩模組, 分別讓LED輪流表現正紅、正綠、正藍，三個顏色，時間間隔1秒鐘。並且觀查LED顏色和波形或是電壓有什麼關連性?
+
+### 電路 & Demo
+
+<img width="1440" alt="截圖 2023-12-18 上午10 23 52" src="https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/e3eedff4-d69e-4f47-91d9-0507f36ccf76">
+
+https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/6588ea82-cb08-4ab4-bab5-343b9e6cdf21
+
+
+
 
