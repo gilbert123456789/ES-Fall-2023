@@ -79,7 +79,73 @@ void loop()
    
 }
 
+## 3-3: Arduino常用的C語言程式介紹與實作
 
+### 電路 ＆ Demo
+
+<img width="1440" alt="截圖 2023-12-18 下午12 28 16" src="https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/02b8de52-2c83-43a9-b888-370d589b7d8b">
+
+https://github.com/gilbert123456789/ES-Fall-2023/assets/144580521/29d5320a-0a25-4d20-a69d-b650147de9d2
+
+### 程式
+
+/*
+ Lab 3-3, Embedded System, VNU
+ Date: 2021/09/26
+*/
+int RLED = 13;
+int GLED = 11;
+
+
+int result, result2, result3;
+String d0 = "****** 9X9 Table ******";
+String d1, d2, d3;
+void setup()
+{
+  pinMode(RLED, OUTPUT);   // Configure PIN13
+  pinMode(GLED, OUTPUT);   // Configure PIN11
+  
+  Serial.begin(9600);
+
+}
+
+void loop()
+{
+  int aa = 0;
+
+  Serial.println(d0); 
+  
+  digitalWrite(RLED, HIGH);
+  analogWrite(GLED, aa); 
+  
+  for (int i=1;i<=9; i=i+3){
+    for (int j=1;j<=9; j++){
+      
+      result = i*j;
+      result2 = (i+1)*j;
+      result3 = (i+2)*j;
+      
+      d1 = String(String(i) + "X" + String(j) + "=" + String(result));
+
+     /*
+       待完成
+     */
+      
+      Serial.println(d1 + ", " + d2 + ", " + d3);
+    
+      aa+=1;
+      
+      delay(100);
+    } // loop j
+    analogWrite(GLED, aa*3); 
+    Serial.println("");
+  } // loop i
+
+  digitalWrite(RLED, LOW);
+  analogWrite(GLED, 255); 
+  delay(2000);	
+  analogWrite(GLED, 0);
+}
 
 
 
